@@ -1,0 +1,4 @@
+interface:
+  display_name: "零基础做课 Skill"
+  short_description: "回答三个问题，做出一节自己能开讲的课：定位卡、20 分钟教案、幻灯片页纲、学员能带走的东西"
+  default_prompt: "请使用 $lx-zero-to-course 帮我把我会的一件事做成一节课。不用让我写大纲，问我三个问题就好：谁问过你什么、你当时怎么做、他最容易错在哪，然后给我能直接照着讲的教案。"

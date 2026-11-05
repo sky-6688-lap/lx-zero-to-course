@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>课程包 · 视觉与结构模板</title>
+<style>
+@page{size:A4;margin:14mm 14mm 15mm}
+*{box-sizing:border-box}
+html{font-family:"PingFang SC","Microsoft YaHei",sans-serif;color:#27343b}
+body{margin:0;background:#edf1f2}
+.toolbar{max-width:900px;margin:18px auto -10px;text-align:right}
+.download{display:inline-block;padding:8px 13px;border:1px solid #cbd9de;background:#fbfcfc;color:#405761;text-decoration:none;font-size:12px}
+.report{max-width:900px;margin:26px auto;background:#fbfcfc;padding:43px 43px 31px}
+.top,.meta,.section-head,.footer{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.top{font-size:10px;letter-spacing:.16em;color:#647a86}
+.edition{border:1px solid #d4dfe3;padding:6px 9px;background:#fff;letter-spacing:.04em}
+.header{padding-bottom:23px;border-bottom:2px solid #31434d}
+.header h1{font-size:39px;line-height:1.24;letter-spacing:-.045em;margin:24px 0 10px;font-weight:750}
+.subtitle{font-size:15px;color:#71808a}
+.meta{font-size:10.5px;color:#82919a;margin-top:18px}
+.summary{background:#edf3f6;margin:24px 0 17px;padding:25px 27px}
+.kicker{display:inline-block;background:#d56c58;color:#fff;padding:6px 10px;font-size:11.5px;font-weight:700;letter-spacing:.05em}
+.summary h2{font-size:27px;margin:12px 0 9px;letter-spacing:-.02em}
+.summary p{font-size:13px;line-height:1.82;color:#586b75;margin:0}
+.decision{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #d8e1e5;background:#fff}
+.decision>div{padding:15px 17px;border-right:1px solid #d8e1e5}
+.decision>div:last-child{border:0}
+.decision small{display:block;font-size:11.5px;font-weight:700;color:#b75948;margin-bottom:8px;letter-spacing:.03em}
+.decision b{font-size:12.5px;line-height:1.6;font-weight:600}
+.group-head{display:flex;align-items:center;margin:38px 0 -8px;padding:0 0 10px;color:#b75948}
+.group-head:after{content:"";height:1px;background:#d9e1e4;flex:1;margin-left:4px}
+.group-index{color:#d56c58;font-size:21px;font-weight:750}
+.group-title{font-size:21px;font-weight:750;letter-spacing:.04em}
+.group-desc{font-size:10.5px;color:#87969d;margin-left:10px}
+.section{margin-top:31px}
+.section-head{justify-content:flex-start;border-bottom:1px solid #d6e0e4;padding-bottom:10px;margin-bottom:15px;gap:10px}
+.num{font-size:17px;line-height:1;font-weight:500;color:#526b77}
+.section h2{font-size:17px;margin:0}
+.en{margin-left:auto;font-size:9.5px;letter-spacing:.14em;color:#9aa8af}
+.rows{border:1px solid #d8e1e5;background:#fff}
+.row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid #dfe7ea}
+.row:last-child{border-bottom:0}
+.row small{display:block;padding:14px 16px;background:#f4f7f8;font-size:11px;line-height:1.5;font-weight:650;color:#526d79;border-right:1px solid #dfe7ea}
+.row div{padding:14px 16px}
+.row h3{font-size:13.2px;margin:0 0 5px;font-weight:650}
+.row p{font-size:11.4px;line-height:1.72;color:#52656f;margin:0}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid #d8e1e5;background:#fff}
+.tl{padding:14px 13px;border-right:1px solid #dfe7ea}
+.tl:last-child{border-right:0}
+.tl b{display:block;font-size:10.5px;color:#d56c58;letter-spacing:.05em;margin-bottom:6px;font-weight:700}
+.tl h3{font-size:12.4px;margin:0 0 5px;font-weight:650;line-height:1.4}
+.tl p{font-size:10.4px;line-height:1.62;color:#5c6f79;margin:0}
+.quote{border-left:3px solid #d56c58;background:#f7f9fa;padding:20px 22px;margin-top:4px}
+.quote p{font-size:16.5px;line-height:1.78;color:#2f414a;margin:0 0 10px;font-weight:600}
+.quote span{font-size:10.8px;line-height:1.7;color:#7c8d96}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #d8e1e5;background:#fff}
+.step{padding:15px 16px;border-right:1px solid #dfe7ea}
+.step:last-child{border-right:0}
+.step b{display:block;font-size:11px;color:#d56c58;letter-spacing:.06em;margin-bottom:7px}
+.step h3{font-size:13.2px;margin:0 0 9px;font-weight:650;line-height:1.45}
+.step dl{margin:0}
+.step dt{font-size:9.8px;letter-spacing:.06em;color:#8a99a1;margin-top:8px}
+.step dd{margin:2px 0 0;font-size:10.9px;line-height:1.68;color:#52656f}
+.two-col{display:grid;grid-template-columns:1fr 1.15fr;gap:14px}
+.mini{border:1px solid #d8e1e5;background:#fff;padding:16px 18px}
+.mini b{display:block;font-size:12px;color:#31434d;margin-bottom:9px;font-weight:700}
+.mini ul{margin:0;padding-left:16px}
+.mini li{font-size:11.3px;line-height:1.8;color:#52656f}
+.mini .note{font-size:10.5px;line-height:1.7;color:#7c8d96;margin:8px 0 0}
+.table-scroll{overflow-x:auto}
+.table{width:100%;border-collapse:collapse;font-size:11.4px;background:#fff;border:1px solid #d8e1e5}
+.table th{font-size:11.5px;font-weight:650;color:#405b67;text-align:left;padding:11px 13px;background:#edf3f6;border-bottom:1px solid #d8e1e5}
+.table td{padding:11px 13px;line-height:1.72;border-bottom:1px solid #e4ebee;vertical-align:top;color:#3f535d}
+.table tr:last-child td{border-bottom:0}
+.table td:first-child{font-weight:600;color:#31434d;text-align:center}
+.table .t{white-space:nowrap;color:#71808a;font-weight:500}
+.takeaway{margin-top:26px;padding:0;background:transparent}
+.takeaway small{display:inline-flex;background:#d56c58;color:#fff;padding:6px 11px;font-size:12.5px;font-weight:750;letter-spacing:.04em;margin-bottom:11px}
+.takeaway b{display:block;font-size:18.5px;line-height:1.5;color:#2f414a}
+.takeaway p{font-size:11.5px;line-height:1.72;color:#596d77;margin:6px 0 0}
+.footer{margin-top:34px;padding-top:13px;border-top:1px solid #d6e0e4;font-size:10px;color:#82919a}
+.warn{display:inline-block;margin-left:6px;padding:2px 6px;background:#f6efed;color:#b75948;font-size:9.5px;font-weight:650}
+@media print{.toolbar{display:none}.report{margin:0}.section,.steps,.rows,.two-col,.timeline,.takeaway{break-inside:avoid}}
+@media(max-width:700px){
+.toolbar{margin:10px 14px}
+.report{margin:0;padding:26px 20px}
+.header h1{font-size:32px}
+.summary h2{font-size:23px}
+.decision,.facts,.steps,.timeline,.two-col{grid-template-columns:1fr}
+.decision>div{border-right:0;border-bottom:1px solid #d8e1e5}
+.tl{border-right:0;border-bottom:1px solid #dfe7ea}
+.step{border-right:0;border-bottom:1px solid #dfe7ea}
+.step:last-child{border-bottom:0}
+.row{grid-template-columns:1fr}
+.row small{border-right:0;border-bottom:1px solid #dfe7ea;padding:10px 16px}
+.group-desc{display:none}
+.table{min-width:640px}
+}
+</style></head><body>
+<div class="toolbar"><a class="download" download="课程包.pdf" href="#">保存为 PDF</a></div>
+<main class="report">
+
+<header class="header">
+  <div class="top"><span>COURSE DESIGN</span><span class="edition">示例 · 视觉与结构模板</span></div>
+  <h1>把你会的一件事，<br>讲成别人的第一节课。</h1>
+  <div class="subtitle">课程包 · 从「我会点什么」到「第一节课怎么讲」</div>
+  <div class="meta"><span>示例画像：4 年电商客服 · 带 3 人小组</span><span>基于示例对话生成 · 未与学员验证</span></div>
+</header>
+
+<div class="summary">
+  <div class="kicker">这节课一句话</div>
+  <h2>客户发火的时候，第一句怎么回</h2>
+  <p>一个人摸索着做客服，最常犯的错不是态度不好，是顺序错了：先解释规定，再道歉，最后才给方案。这节课只讲一个动作——把顺序倒过来。20 分钟，讲给做了半年以内、还没独立处理过投诉的新人。</p>
+</div>
+
+<div class="decision">
+  <div><small>课名</small><b>客户发火的时候，<br>第一句怎么回</b></div>
+  <div><small>谁在听</small><b>做客服半年以内<br>没独立处理过投诉的新人</b></div>
+  <div><small>学完能做到</small><b>接到投诉先判断对方要什么，<br>再按三步回完，不激化</b></div>
+</div>
+
+<div class="group-head"><span class="group-index">一、</span><span class="group-title">这节课是什么</span><span class="group-desc">先看讲给谁</span></div>
+
+<section class="section">
+  <div class="section-head"><span class="num">01</span><h2>定位卡</h2><span class="en">POSITION</span></div>
+  <div class="rows">
+    <div class="row"><small>课名</small><div><h3>客户发火的时候，第一句怎么回</h3><p>用学员的问题当课名，不用「客诉情绪管理三步法」这种方法名。</p></div></div>
+    <div class="row"><small>谁在听</small><div><h3>做客服半年以内、还没独立处理过投诉的新人</h3><p>只写一种人。写成「新人和老手都适合」，等于没写。</p></div></div>
+    <div class="row"><small>他现在的麻烦</small><div><h3>一看到客户发火就慌</h3><p>要么解释规定，要么一直道歉，越回越僵，最后只能转给主管。</p></div></div>
+    <div class="row"><small>学完能做到</small><div><h3>先判断对方要什么，再按三步把话回完</h3><p>判断标准：他回完之后，客户没有升级投诉，也没有被转给主管。</p></div></div>
+    <div class="row"><small>这节课不解决</small><div><h3>不讲赔偿标准怎么定，也不讲怎么跟平台申诉</h3><p>这两件是另一门课，混进来会让 20 分钟讲不完。</p></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><span class="num">02</span><h2>学完能做到什么</h2><span class="en">OUTCOME</span></div>
+  <div class="rows">
+    <div class="row"><small>能做到</small><div><h3>接到一条发火的投诉，按三步回完</h3><p>三步是：先分清他要解决还是要发泄、先接住情绪再给结论、给一个具体时间并留一句回头话。</p></div></div>
+    <div class="row"><small>怎么判断学会了</small><div><h3>换一个陌生客户，仍然知道第一句说什么</h3><p>不看卡片也能说出「换我我也急」之后该接哪一句。</p></div></div>
+    <div class="row"><small>什么时候别用</small><div><h3>涉及赔付金额和安全事故的投诉，别套这三步</h3><p>这类要先上报，硬套话术会把小事拖大。这一句必须放在结尾讲。</p></div></div>
+  </div>
+</section>
+
+<div class="group-head"><span class="group-index">二、</span><span class="group-title">这节课怎么讲</span><span class="group-desc">照着念的部分</span></div>
+
+<section class="section">
+  <div class="section-head"><span class="num">03</span><h2>二十分钟怎么分</h2><span class="en">TIMELINE</span></div>
+  <div class="timeline">
+    <div class="tl"><b>0:00–1:30</b><h3>开场钩子</h3><p>复现他删了又打的那三行字。</p></div>
+    <div class="tl"><b>1:30–3:00</b><h3>承诺与边界</h3><p>学完能做到什么，我不讲什么。</p></div>
+    <div class="tl"><b>3:00–6:00</b><h3>为什么难</h3><p>三种错法，先让他承认自己这么干过。</p></div>
+    <div class="tl"><b>6:00–14:00</b><h3>三步做法</h3><p>每步 2–2.5 分钟，四句话讲完。</p></div>
+    <div class="tl"><b>14:00–17:30</b><h3>带着做一遍</h3><p>换个场景，他填，你给参考答案。</p></div>
+    <div class="tl"><b>17:30–20:00</b><h3>收尾与作业</h3><p>复述三步，亮卡片，说明天做什么。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><span class="num">04</span><h2>开场第一句</h2><span class="en">OPENING</span></div>
+  <div class="quote">
+    <p>「客户在群里发了一长段，最后一句是『你们就是这样对待老客户的？』——你打了三行字，删了，又打三行，又删了。」</p>
+    <span>开场只做一件事：让他想起自己那个场面。这里不做自我介绍，不讲课程由来，不寒暄。</span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><span class="num">05</span><h2>三步做法</h2><span class="en">THREE STEPS</span></div>
+  <div class="steps">
+    <div class="step">
+      <b>STEP 01</b><h3>先分清他是在要解决，还是在发泄</h3>
+      <dl>
+        <dt>怎么做</dt><dd>看他有没有提具体要求。提了就是要解决，没提就先按发泄处理。</dd>
+        <dt>怎么判断做对了</dt><dd>你能用一句话说出他最在意的那件事。</dd>
+        <dt>常见错</dt><dd>一上来就解释规定，他会更炸。</dd>
+      </dl>
+    </div>
+    <div class="step">
+      <b>STEP 02</b><h3>先接住情绪，再给结论</h3>
+      <dl>
+        <dt>怎么做</dt><dd>先说「换我我也急」，再说「我这边现在能做的是……」，最后说时间。</dd>
+        <dt>怎么判断做对了</dt><dd>对方从「你们」变成「你」，就是接住了。</dd>
+        <dt>常见错</dt><dd>「非常理解您的心情，但是……」——但是之前的话他都不听。</dd>
+      </dl>
+    </div>
+    <div class="step">
+      <b>STEP 03</b><h3>给一个具体时间，留一句回头话</h3>
+      <dl>
+        <dt>怎么做</dt><dd>说「今天 18 点前我回你」，不说「尽快」；结尾留一句「有变化我先告你」。</dd>
+        <dt>怎么判断做对了</dt><dd>他到点之前没有再来催第三次。</dd>
+        <dt>常见错</dt><dd>一直道歉不给方案，他觉得你在拖。</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><span class="num">06</span><h2>练习与收尾</h2><span class="en">PRACTICE</span></div>
+  <div class="two-col">
+    <div class="mini">
+      <b>带着做一遍 · 3.5 分钟</b>
+      <ul>
+        <li>场景：客户收到货发现少了一件，说「你们是不是故意的」。</li>
+        <li>口令：「你先做什么？停三秒想一下，再往下听。」</li>
+        <li>给参考答案，并说明「你的答案可以不一样，满足判断标准就行」。</li>
+      </ul>
+      <p class="note">练习不是考试，是让他当着你的面把三步用一次。</p>
+    </div>
+    <div class="mini">
+      <b>收尾 · 3 件事</b>
+      <ul>
+        <li>三步各一句复述，不展开。</li>
+        <li>亮出「客服回话三步卡」，说「截个图，明天用」。</li>
+        <li>说边界：涉及赔付和安全的投诉，先上报，别套这三步。</li>
+      </ul>
+      <p class="note">作业：明天遇到第一个发火的客户，先用第 1 步判断，再回，回完把对话截下来自查。</p>
+    </div>
+  </div>
+</section>
+
+<div class="group-head"><span class="group-index">三、</span><span class="group-title">幻灯片页纲</span><span class="group-desc">每页写什么</span></div>
+
+<section class="section">
+  <div class="section-head"><span class="num">07</span><h2>十二页</h2><span class="en">SLIDES</span></div>
+  <div class="table-scroll"><table class="table">
+    <thead><tr><th style="width:8%">页</th><th style="width:26%">标题</th><th>这一页放什么</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>客户发火的时候，第一句怎么回</td><td>课名 + 一句承诺，不放副标题和讲师简介</td></tr>
+      <tr><td>2</td><td>你是不是也这样过</td><td>三行场景：删了又打、越解释越炸、最后转给主管</td></tr>
+      <tr><td>3</td><td>这 20 分钟你能拿到</td><td>左栏三条能做的，右栏一条我不讲的</td></tr>
+      <tr><td>4</td><td>大多数人栽在这三处</td><td>只写错法，不写答案</td></tr>
+      <tr><td>5</td><td>我的做法：三步</td><td>全课唯一的总览页，三步只写动词</td></tr>
+      <tr><td>6</td><td>第一步：分清要解决还是要发泄</td><td>结论 + 三小条怎么做</td></tr>
+      <tr><td>7</td><td>看一段真的对话</td><td>真实聊天截图，不用示意图</td></tr>
+      <tr><td>8</td><td>第二步：先接住，再给结论</td><td>结论 + 两句原话</td></tr>
+      <tr><td>9</td><td>「但是」之前的话他都不听</td><td>正反两句对照</td></tr>
+      <tr><td>10</td><td>第三步：给时间，留回头话</td><td>「尽快」和「今天 18 点前」的差别</td></tr>
+      <tr><td>11</td><td>客服回话三步卡</td><td>截屏页：三步 + 判断标准 + 别用的场景</td></tr>
+      <tr><td>12</td><td>明天上班第一件事</td><td>作业 + 一句边界提醒</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<div class="group-head"><span class="group-index">四、</span><span class="group-title">今天怎么开始</span><span class="group-desc">最后看第一步</span></div>
+
+<section class="section">
+  <div class="section-head"><span class="num">08</span><h2>开讲前待补</h2><span class="en">TO FILL</span></div>
+  <div class="rows">
+    <div class="row"><small>缺例子<span class="warn">未通过</span></small><div><h3>第 7 页还没有真实聊天截图</h3><p>把去年那条最典型的对话翻出来，去掉客户信息再截。这个比任何示意都管用，预计 20 分钟。</p></div></div>
+    <div class="row"><small>缺学员验证<span class="warn">未通过</span></small><div><h3>还没有新人完整看过</h3><p>先录开场 90 秒，发给两个组里的新人，问「你会想继续听吗，哪句听不懂」。预计 2 天。</p></div></div>
+    <div class="row"><small>时间待压</small><div><h3>按现在的内容，实际会讲到 26 分钟</h3><p>砍掉第 4 页里第三个错法的解释，那一条和第 9 页重复。预计 10 分钟。</p></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="takeaway">
+    <small>你的第一步</small>
+    <b>今天只录开场那 90 秒。</b>
+    <p>不用往后录，不用做 PPT。就念那句「你打了三行字，删了，又打三行」——念完自己听一遍，会不会想起自己刚做客服那会儿。会，就往下录第 2 段。</p>
+  </div>
+</section>
+
+<div class="footer"><span>零基础做课 Skill</span><span>雾蓝灰编辑感 · 20 分钟版</span></div>
+</main></body></html>
