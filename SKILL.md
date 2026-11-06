@@ -163,10 +163,11 @@ D 不重跑三问。先问一句「那次讲给谁、讲到哪一段卡住的」
 
 需要更细的结构方法（流程式/并列式/递进式、章节规格、难度曲线）时，再读：
 
-- [references/course-structure.md](references/course-structure.md)
-- [references/learning-experience.md](references/learning-experience.md)
-- [references/course-type-routing.md](references/course-type-routing.md)
-- [references/teaching-objectives.md](references/teaching-objectives.md)
+- [references/course-structure.md](references/course-structure.md)：章节怎么分、难度怎么排
+- [references/course-type-routing.md](references/course-type-routing.md)：单节 / 小系列 / 体系课程三档怎么判
+- [references/learning-experience.md](references/learning-experience.md)：练习和案例怎么安排
+- [references/teaching-objectives.md](references/teaching-objectives.md)：每节学完要能做什么
+- [references/knowledge-assets.md](references/knowledge-assets.md)：素材不够、要判断哪段经历撑得起一节时用；它的门槛比第一节高，别拿它去筛一个还没做过课的人
 
 这些是进阶材料。**用户没要求做整门课时，不要读、不要引用、不要在对话里提这些概念。**
 
@@ -186,6 +187,8 @@ D 不重跑三问。先问一句「那次讲给谁、讲到哪一段卡住的」
 4. 今天就能做的第一步
 
 报告以「你的第一步」结束，只写一个动作。
+
+交付前按 [references/self-check.md](references/self-check.md) 过一遍：三条固定项（三问答的是他自己的事、教案能不能照着念、页纲行数对不对得上这次时长）加一条时长项。哪条过不了就回去补，不要带着缺项交付。
 
 ## 边界
 

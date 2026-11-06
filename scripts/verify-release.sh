@@ -161,6 +161,27 @@ for relative in required_files:
     if contact_pattern.search(text):
         raise SystemExit(f"校验失败：{relative} 仍包含联系方式")
 
+# 口径一致性守门：同一规则的数值在所有文件里必须一致，废弃旧值不许回潮
+stale_patterns = [r"150 字", r"六问"]
+for path in sorted(root.rglob("*.md")):
+    if "CHANGELOG" in path.name or "dist" in path.parts:
+        continue
+    text = path.read_text(encoding="utf-8")
+    for pattern in stale_patterns:
+        if re.search(pattern, text):
+            raise SystemExit(f"校验失败：{path.relative_to(root)} 仍出现废弃口径 {pattern}")
+
+for rel in ["references/boundaries.md", "tests/regression-checklist.md"]:
+    text = (root / rel).read_text(encoding="utf-8")
+    if "200 字" not in text:
+        raise SystemExit(f"校验失败：{rel} 缺越界回复的 200 字上限")
+
+# 进阶材料必须从 SKILL.md 可达，否则等于没交付
+skill_text = (root / "SKILL.md").read_text(encoding="utf-8")
+for path in sorted((root / "references").glob("*.md")):
+    if path.name not in skill_text:
+        raise SystemExit(f"校验失败：references/{path.name} 没有被 SKILL.md 引用（孤儿文件）")
+
 class ReportParser(HTMLParser):
     pass
 
