@@ -108,10 +108,18 @@ checks = {
         "## 一、本 Skill 的完成边界",
         "## 四、完整收尾",
         "报告中不出现任何外部链接、二维码、报名入口",
+        "逐条回",
     ],
     "references/course-type-routing.md": [
         "## 二、判断该做哪一种",
         "## 三、不确定时的默认路径",
+        "小系列",
+    ],
+    "references/course-structure.md": [
+        "只适用于 5 小时以上的体系课程",
+    ],
+    "references/self-check.md": [
+        "小系列（默认的升级结果）",
     ],
     "tests/test-cases.md": [
         "## 15. 收口后用户又补一句",
