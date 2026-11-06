@@ -5,4 +5,4 @@
 - Source commit: 0f00c7e
 - Repository: https://github.com/sky-6688-lap/lx-zero-to-course
 
-当用户要求更新本 Skill 时，Agent 应在后台比较 GitHub 与本地的 Version 和 Source commit。两者一致后，只需向用户回复“已更新到 v2026.11.06.5”；如果仍不一致，回复“更新未成功”，不要用术语增加用户负担。
+当用户要求更新本 Skill 时，Agent 应在后台比较 GitHub 上最新版本与本地的 Version：一致就只回复“已更新到 v2026.11.06.5”，不一致就回复“更新未成功”，不要用术语增加用户负担。Source commit 只用于追溯这次发布的内容，不要拿它判断是否需要更新——它是内容提交，版本号提交会比它再晚一次。
