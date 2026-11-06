@@ -56,11 +56,15 @@ if not skill.startswith("---\n") or "name: lx-zero-to-course" not in skill:
 
 checks = {
     "SKILL.md": [
-        "# 零基础做课 Skill",
         "## 主线：三个问题做出一节课",
         "### 第 1 问：谁问过你什么",
         "## 产出：课程包四件",
         "不假设用户装了别的 Skill",
+        "《个人经验产品化》的构想单",
+    ],
+    "references/beginner-path.md": [
+        "## 〇、带着构想单来的用户",
+        "跳过状态选择和第 1 问",
     ],
     "agents/openai.yaml": ['display_name: "零基础做课 Skill"'],
     "assets/report-example.html": [
