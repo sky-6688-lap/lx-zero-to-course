@@ -1,8 +1,8 @@
 # Skill 版本证明
 
-- Version: v2026.11.06.3
-- Released: 2026-11-06 15:41:38 CST
-- Source commit: 9cc3453
+- Version: v2026.11.06.4
+- Released: 2026-11-06 16:05:10 CST
+- Source commit: 7994bab
 - Repository: https://github.com/sky-6688-lap/lx-zero-to-course
 
-当用户要求更新本 Skill 时，Agent 应在后台比较 GitHub 与本地的 Version 和 Source commit。两者一致后，只需向用户回复“已更新到 v2026.11.06.3”；如果仍不一致，回复“更新未成功”，不要用术语增加用户负担。
+当用户要求更新本 Skill 时，Agent 应在后台比较 GitHub 与本地的 Version 和 Source commit。两者一致后，只需向用户回复“已更新到 v2026.11.06.4”；如果仍不一致，回复“更新未成功”，不要用术语增加用户负担。
